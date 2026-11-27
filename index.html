@@ -266,7 +266,588 @@
         .doctor-btn {
             margin-left: 10px;
         }
+        /* ===== MEDIDOC PREMIUM DOCTOR DIRECTORY ===== */
+
+        .doctor-directory {
+            padding: 85px 7%;
+            background:fixedradial-gradient(circle at 10% 10%, #e8ddff 0, transparent 35%),
+            radial-gradient(circle at 90% 75%, #d9f7eb 0, transparent 35%),
+            linear-gradient(135deg, #faf8ff, #f0fbf7);
+            overflow: hidden;
+        }
+
+        .directory-hero {
+            position: relative;
+            padding: 75px 45px;
+            border-radius: 35px;
+            text-align: center;
+            background: linear-gradient(120deg, #7555a8, #a58bd1 55%, #73bca5);
+            color: white;
+            box-shadow: 0 25px 65px rgba(91, 67, 137, .20);
+            overflow: hidden;
+        }
+
+        .directory-hero::before,
+        .directory-hero::after {
+            content:"";
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .12);
+            pointer-events: none;
+        }
+
+        .directory-hero::before {
+        width: 240px;
+        height: 240px;
+        top: -100px;
+        right: -50px;
+     }
+
+     .directory-tag {
+        display: inline-block;
+        font-size: 11px;
+        letter-spacing: 3px;
+        font-weight: 700;
+        margin-bottom: 20px;
+     }
+
+     .directory-hero h2 {
+        font-size: clamp(32px, 5vw, 55px);
+    line-height: 1.15;
+margin: 12px 0;
+     }
+
+     .directory-hero p {
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 570px;
+        margin: 15px auto 28px;
+        color: #f4efff;
+     }
+
+     .directory-search {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        max-width: 650px;
+        margin: 30px auto 0;
+        padding: 8px 22px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255,n.96);
+        color: #705b91;
+        box-shadow: 0 12px 35px rgba(40, 30, 70, .15);
+     }
+
+     .directory-search span {
+        font-size: 28px;
+     }
+
+     .directory-content {
+        max-width: 1200px;
+        margin: 65px auto 0;
+     }
+
+     .directory-title span {
+        color: #65a994;
+        letter-spacing: 2px;
+        font-size: 11px;
+        font-weight: 800;
+     }
+
+     .directory-title h3 {
+        color: #40334f;
+        font-size: 32px;
+        margin: 10px 0;
+     }
+
+     #specialityFilter {
+        padding: 14px 20px;
+        border: 1px solid #e4d9f2;
+        border-radius: 14px;
+        background: white;
+        color: #626575;
+        font-size: 14px;
+        outline: none;
+     }
+
+     .doctor-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+     }
+
+     .empty-doctors span {
+        font-size: 45px;
+     }
+
+     .empty-doctors h3 {
+        color: #504064;
+        margin: 18px 0 8px;
+     }
+
+     .empty-doctors p {
+        color: #8c819b;
+     }
+
+     @media (max-width: 850px) {
+        .doctor-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+        }
+
+        .directory-hero {
+            padding: 55px 25px;
+        }
+     }
+
+     @media (max-width: 560px) {
+        .doctor-directory {
+            padding: 50px 5%;
+        }
         
+        .doctor-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .directory-title h3 {
+            font-size: 26px;
+        }
+
+        .directory-hero {
+            padding: 45px 18px;
+            border-radius: 25px;
+        }
+    }
+    .doctor-directory {
+        padding: 70px 8%;
+        background: linear-gradient(135deg, #f7f3ff,#effbf7);
+        text-align: center;
+    }
+
+    .directory-heading span {
+        color: #9075bd;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+
+    .directory-heading h2 {
+        color: #37304d;
+        font-size: 32px;
+        margin: 12px 0;
+    }
+
+    .directory-heading p {
+        color: #777386;
+        margin-bottom: 30px;
+    }
+
+    .directory-search {
+        max-width: 550px;
+        margin: 0 auto 30px;
+    }
+
+    .directory-search input{
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #e5def0;
+        border-radius: 14px;
+        box-sizing: border-box;
+        background: white;
+    }
+
+    .doctor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .doctor-card,
+    .empty-doctors {
+        background: white;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(91, 75, 125, 0.08);
+    }
+
+    .doctor-card h3,
+    .empty-doctors h3 {
+        color: #44385e;
+    }
+
+    .doctor-card p,
+    .empty-doctors p {
+        color: #777386;
+        line-height: 1.6;
+    }
+
+    .empty-doctors span {
+        font-size: 35px;
+    }
+    .directory-search {
+        display: flex;
+        gap: 12px;
+        max-width: 650px;
+        margin:  0 auto 30px;
+    }
+
+    .directory-search input,
+    .directory-search select {
+        flex: 1;
+        min-width: 0;
+        padding: 15px;
+        border: 1px solid #e5def0;
+        border-radius: 14px;
+        background: peachpuff;
+        color: #6a5c82;
+    }
+
+    @media (max-width: 600px) {
+        .directory-search {
+            flex-direction: column;
+        }
+    }
+
+    .appointment-section {
+        position: relative;
+        overflow: hidden;
+        padding: 85px 8%;
+        background: radial-gradient(ellipse at 10% 15%, rgba(190, 160, 235, 0.38), transparent 35%),
+        radial-gradient(ellipse at 90% 20%, rgba(126, 218, 190, 0.35), transparent 32%),
+        radial-gradient(ellipse at 75% 90%, rgba(155, 190, 235, 0.28), transparent 38%),
+        linear-gradient(135deg, #f5edff, #e9faf4 55%, #f3f5ff);
+        text-align: center;
+    }
+
+    .appointment-heading span {
+        color: #9075bd;
+        font-size:n12px;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+
+    .appointment-heading p {
+        color: #777386;
+        margin-bottom: 30px;
+    }
+
+    .appointment-card {
+        max-width: 550px;
+        margin: auto;
+        padding: 35px;
+        background: rgb(163, 134, 159);
+        border-radius: 24px;
+        box-shadow: 0 10px 30px rgba(91, 75, 125, 0.10);
+    }
+
+    #appointmentForm {
+        display: grid;
+        gap: 15px;
+        text-align: left;
+    }
+
+    #appointmentForm input,
+    #appointmentForm select {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #e5def0;
+        border-radius: 12px;
+        background:#fcfaff;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    #appointmentForm label {
+        color: #554b68;
+        font-size: 14px;
+    }
+
+    #appointmentMessage {
+        color: #7656a5;
+        font-size: 14px;
+        border: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #9c83c5, #70bba6);
+        color:#f4efff;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    #appointmentMessage {
+        color: #7656a5;
+        font-size: 14px;
+    }
+
+    .pateint-dashboard {
+        padding: 75px 8%;
+        background: radial-gradient(circle at 5% 10%, rgba(206, 184, 244, .45), transparent 30%),
+        radial-gradient(circle at 95% 40%, rgba(174, 232, 211, .45), transparent 32%),
+
+        linear-gradient(135deg, #f8f3ff, #edf9f5 55%, #f5f4ff);
+    color: #403653;
+    }
+
+    .pateint-dashboard-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+        padding: 45px;
+        border-radius: 30px;
+        background: linear-gradient(120deg, #e9ddff, #e0f7ed);
+    box-shadow: 0 15px 35px
+rgba(91, 75, 125, .10);
+overflow: hidden;
+   }
+
+   .welcome-content {
+    max-width: 520px;
+   }
+
+   .welcome-label,
+   .dashboard-section-heading span,
+   .booking-heading span,
+   .dashboard-bottom-banner span {
+    color: #8a70b3;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+   }
+
+   .welcome-content h2 {
+    font-size: 34px;
+    margin: 13px 0;
+    color: #423454;
+   }
+
+   .welcome-content p,
+   .dashboard-section-heading p,
+   .dashboard-bottom-banner p {
+    color: #777187;
+    line-height: 1.7;
+   }
+
+   .welcome-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+   }
+
+   .welcome-actions button {
+    border: 0;
+    padding: 13px 20px;
+    border-radius: 25px;
+    background: #76619c;
+    color:#e9dcf8;
+    cursor: pointer;
+    font-weight: 600;
+   }
+
+   .welcome-actions .secondary-action {
+    background: white;
+    color: #695587;
+   }
+
+   .welcome-illustrations {
+    width: 220px;
+    height:220px;
+    min-width: 180px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #c7f0df, #d9c9f5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: inset 0 0 25px
+    rgba(255, 255, 255, .7), 0 15px 30px
+    rgba(99, 83, 138, .12);
+   }
+
+   .illustration-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 30px;
+    background: white;
+    display: grid;
+    place-items: center;
+    color: #8065a9;
+    font-size: 65px;
+    box-shadow: 0 10px 25px 
+    rgba(80, 65, 110, .12);
+   }
+
+   .floating-medical-icon {
+    position: absolute;
+    background: white;
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(80, 65, 110, .12);
+   }
+
+   .icon-one { top: 12px; right: 5px; }
+   .icon-two { bottom: 12px; left: 5px; }
+   .icon-three { bottom: 25px; right: 5px; }
+
+   .dashboard-section-heading {
+    text-align: center;
+    margin: 65px 0 30px;
+   }
+
+   .dashboard-section-headinh h2,
+   .booking-heading h2 {
+    font-size: 27px;
+    color: #453858;
+    margin: 10px 0;
+   }
+
+   .dashboard-stats {
+    display: gris;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+   }
+
+   .stats-card {
+    padding: 25px;
+    border-radius: 23px;
+    background: rgba(255, 255, 255, .92);
+    box-shadow: 0 10px 28px 
+    rgba(91, 75, 125, .08);
+    border: 1px solid 
+    rgba( 255, 255, 255, .8);
+   }
+
+   .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    background: #eee6ff;
+    font-size: 22px;
+   }
+
+   .upcoming-stat .stat-icon { background: #def6eb; }
+   .complete-stat .stat-icon { background: #e6edff; }
+
+   .stat-card p {
+    color: #777187;
+    font-size: 14px;
+    margin: 18px 0 5 px;
+   }
+
+   .stat-card h3 {
+    font-size: 32px;
+    color: #55446e;
+    margin: 5px 0
+   }
+
+   .stat-card span {
+    font-size: 12px;
+    color: #9690a0;
+   }
+
+   .dashboard-bookings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15 px;
+    margin-bottom: 25px;
+   }
+
+   #refreshDashboard {
+    padding: 11px 17px;
+    border: 1px solid #e5dcf3;
+    border-radius: 20px;
+    background: #f7f2ff;
+    color: #705b91;
+    cursor: ppinter;
+   }
+
+   .appointment-record h3 {
+    color: #51416d;
+    margin-top: 0;
+   }
+
+   .appointment-record p {
+    color: #777386;
+    line-height: 1.6;
+    margin: 8px 0;
+   }
+
+   .booking-status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #e3f6eb;
+    color: #39795c;
+    font-size: 12px;
+   }
+
+   .dashboard-empty {
+    text-align: center;
+    padding: 40px 15px;
+    background: #faf8ff;
+    border-radius: 18px;
+   }
+
+   .dashboard-empty span {
+    font-size: 40px;
+   }
+
+   .dashboard-empty p {
+    color: #777386;
+   }
+
+   .dashboard-bottom-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 35px;
+    padding: 30px;
+    border-radius: 23px;
+    background: linear-gradient(120deg, #e4f6ed, #eee5ff);
+   }
+
+   .dashboard-bottom-banner h3 {
+    color: #51416d;
+    margin: 10px 0;
+   }
+
+   .banner-heart {
+    font-size: 65px;
+    color: #9c83bf;
+   }
+
+   @media (max-width: 750px) {
+    .pateint-dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 22px;
+    }
+
+    .welcome-content h2 {
+        font-size: 27px;
+    }
+
+    .welcome-illustration {
+        align-self: center;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-bookings {
+        padding: 20px;
+    }
+
+    .booking-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+   }
         </style>
     </head>>
 
@@ -377,28 +958,218 @@
             <p>Register as a doctor and connect with patients worldwide.</p>
         
         <form id="doctorForm">
-            <input type="email" placeholder="Email Address" required>
+            <input type="text"
+            id="doctorName"
+            placeholder="Doctor's Full Name"
+            required>
 
-            <input type="text" placeholder="Medical Speciality (e.g. Cardiologist)" 
-            inputmode="text" required>
+            <input type="tel"
+            id="doctorMobile"
+            name="doctorMobile"
+            placeholder="mobile Number"
+            required>
 
-            <input type="text" placeholder="Medical Registration Number" required>
+            <input type="email"
+            id="doctorEmail"
+            name="doctorEmail"
+            placeholder="Email Address"
+            required>
 
-            <input type="text" 
-            placeholder="Clinic / Hospital Address" required>
-        
-        <select required>
-            <option value="">Consultation Type</option>
-            <option>Online</option>
-            <option>In-person</option>
-            <option>Both</option>
-        </select>
-    
-    <button type="submit"
-class="btn">Submit Registration</button>
+            <input type="text"
+            id="doctorSpeciality (e.g. Cardiologist)"
+            placeholder="Medical Speciality"
+            required>
+
+            <input type="text"
+            id="doctorRegistration"
+            name="doctorRegistration"
+            placeholder="Medical Registration Number"
+            required>
+
+            <input type="text"
+            id="doctorAddress"
+            name="doctorAddress"
+            placeholder="Clinic / Hospital Address"
+            required>
+
+            <select id="consultationType"
+            name="consultationType" required>
+        <option value="">Consultation Type</option>
+    <option value="Online">Online</option>
+<option value="In-person">In-person</option>
+<option value="Both">Both</option>
+</select>
+
+<button type="submit" class="btn">
+Sumbit Registration
+</button>
+
 </form>
 
 <p id="doctorMessage"></p>
+</section>
+
+<section id="doctorDirectory"
+class="doctor-Directory">
+
+<div class="directory-hero">
+    <span class="directory-tag">MEDIDOC • GLOBAL HEALTHCARE </span>
+    <h2>Exceptional Doctors. <br>Exceptional Care.</h2>
+    <p>Discover specialists and find the right care, wherever you are.</p>
+
+
+<div class="directory-search">
+    <span>🔎</span>
+    <input type="search"
+    id="doctorSearch"
+    placeholder="Search doctors,
+    specialities or clinics...">
+</div>
+</div>
+
+<div class="directory-content">
+    <div class="directory-title">
+<div>
+<span>YOUR HEALTH PARTNERS</span>
+<h3>Meet Our Doctors</h3>
+</div>
+<select id="specialituFilter">
+    <option value="">All Specialities</option>
+    <option>Crdiologist</option>
+    <option>Dermatologist</option>
+    <option>Neurologist</option>
+    <option>Paediatrician</option>
+    <option>General Physician</option>
+</select>
+    </div>
+
+    <div id="doctorList"
+    class="doctor-grid">
+<div class="empty-doctors">
+    <span>🩺</span>
+    <h3>Your doctor community starts here</h3>
+
+    <p>New doctor profiles will appear here.</p>
+</div>
+</div>
+</div>
+
+</section>
+<section id="doctorDirectory"
+class="doctor-directory">
+
+<div class="directory-heading">
+    <span>MEDIDOC ・ GLOBAL HEALTHCARE</span>
+    <h2>Meet Our Doctors</h2>
+    <p>Find the right specialist for your healthcare journey.</p>
+</div>
+
+<div class="directory-search">
+    <input
+    type="search"
+    id="doctorSearch"
+    placeholder="Search by doctors or speciality...."
+    >
+
+    <select id="specialityFilter">
+        <option value="">All Specialities</option>
+        <option
+        value="Cardiologist">Cardiologist</option> 
+    <option
+value="Dermatologist">Dermatologist</option>  
+<option
+value="Dentist">Dentist</option> 
+<option
+value="Neurologist">Neurologist</option>
+<option
+value="Paediatrician">Paediatrician</option>
+<option
+value="General Physician">General Physician</option>
+</select>
+
+</div>
+
+<section id="patient-dashboard"
+class="patient-dashboard"
+
+<div
+class="pateint-dashboard-header">
+<div class="welcome-content">
+    <span class="welcome-label">YOUR PERSONAL HEALTH SPACE</span>
+    <h2>Welcome to MEDIDOC</h2>
+    <p>Your health journey deserves care, comfort and attention.</p>
+
+    <div class="welcome-actions">
+        <button type="button"
+        onclick="document.getElementById('doctorDirectory').scrollIntoView({behavior: 'smooth'})">
+                Explore Doctors
+            </button>
+    </div>
+</div>
+<div class="welcome-illustration">
+    <div class="illustration-circle">➕</div>
+
+    <span class="floating-medical-icon
+    icon-one">🩺</span>
+    <span class="floating-medical-icon
+    icon-two">💗</span>
+    <span class="floating-medical-iconicon-three">➕</span>
+</div>
+</div>
+
+<div class="dashboard-section-heading">
+    <span>YOUR OVERVIEW</span>
+    <h2>Dashboard Summary</h2>
+    <p>A quick look at your appointments.</p>
+</div>
+
+<div class="dashboard-stats">
+
+    <div class="stat-card upcoming-stat">
+        <div class="stat-icon">✔️</div>
+        <p>Past Appointments</p>
+        <h3 id="completedAppointments">0</h3>
+        <span> Appointments dated earlier</span>
+    </div>
+
+</div>
+
+<div class="dashboard-bookings">
+
+    <div class="booking-heading">
+        <div>
+            <span>YOUR HEALTH SCHEDULE</span>
+            <h2>My Appointments</h2>
+        </div>
+        
+        <button type="button"
+        id="refreshDashboard">
+    ↻ Refresh
+</button>
+    </div>
+
+    <div id="patientAppointments"
+    class="patient-appointment-list">
+<div class=dashboard-empty<>
+<span>📆</span>
+<h3>No appointments yet</h3>
+<p>Your appointment details will appear here after booking.</p>
+</div>
+</div>
+
+</div>
+
+<div class="dashboard-bottom-banner">
+    <div>
+        <span>CARE THAT COMES CLOSER</span>
+        <h3>Your wellbeing matters to us.</h3>
+
+        <p>Find the right doctor and take your next step towards better healthcare.</p>
+
+    </div>
+    <span class="banner-heart">♡</span>
+</div>
+
 </section>
                 
                 </main>
@@ -411,22 +1182,252 @@ class="btn">Submit Registration</button>
              </footer>
 
              <script>
-                alert( "MEDIDOC JavaScript is working﹗" );
                 window.addEventListener("DOMContentLoaded", function() {
+                    event.preventDefault();
+                    alert("Doctor registration JavaScript is working!")
 
-                    const form = 
-                    document.getElementById("doctorForm");
-                    const message = document.getElementById("doctorMessage");
+                    const form= document.getElementById("doctorForm");
+                    const form= document.getElementById("doctorForm");
+                    alert("Doctor form found: " + !!form);
+                    const message= document.getElementById("doctorMessage");
+                    const doctorList= document.getElementById("doctorList");
+                    const search= document.getElementById("doctorSearch");
+                    
+                    const appointmentForm= document.getElementById("appointmentForm");
+                    const appointmentMessage= document.getElementById("appointmentMessage");
+                    const selectedDoctor= document.getElementById("selectedDoctors");
+                    
+                    let doctors= JSON.parse(
 
-                    form.addEventListener("submit", function(event) {
+                    localStorage.getItem("medidocDoctors")
+                    ││ "[]" );
+
+                    function displayDoctors() {
+
+                        const searchText= search ?
+                        search.value.toLowerCase(): "";
+                       
+                        const filteredDoctors= doctors.filter(function (doctor) { return 
+                            doctor.name.toLowerCase().includes(searchText) ｜｜
+
+                            doctor.speciality.toLowerCase().includes(searchText);
+                        });
+                        
+                        doctorList.innerHTML= "";
+
+                        if(filteredDoctors.length === 0) {
+                            doctorList.innerHTML= `<div class= "empty-doctors">
+                                <span>🩺</span>
+                                <h3>No doctors found</h3>
+                                <p>Try another name or speciality.</p>
+                                </div>`;
+                                }
+
+                        filteredDoctors.forEach(function (doctor) {
+                            const card= document.createElement("div");
+                            card.className= "doctor-card";
+
+                            const name= document.createElement("h3");
+                            name.textContent= "Dr." + doctor.name;
+
+                            const speciality= document.createElement("p");
+                            speciality.textContent= doctor.speciality;
+
+                            const address= document.createElement("p");
+                            address.textContent= "📍" + doctor.address;
+
+                            const consultation= document.createElement("p");
+                            consultation.textContent= "Consultation: " + doctor.consultation;
+
+                            card.append(name, speciality, address, consultation);
+                            doctorList.appendChild(card);
+                        });
+
+                        updateDoctorOptions();
+                    }
+
+                    function updateDoctorOptions() {
+
+                        selectedDoctor.innerHTML= '<option value="">Select a Doctor</option>';
+
+                        doctors.forEach(function (doctor, index) {
+
+                            const option= document.getElementById("option");
+                            option.value= index;
+                            option.textContent= "Dr. " + doctor.name +
+                            "_" + doctor.speciality;
+
+                            selectedDoctor.appendChild(option)
+                        
+                        });
+                    }
+
+                    if (form && message) {
+
+                        form.addEventListener("submit", function(event) {
+                            event.preventDefault();
+
+                            const doctor= {
+                                name: document.getElementById("doctorName").value.trim(),
+                                email: document.getElementById("doctorEmail").value.trim(),
+                                mobile: document.getElementById("doctorMobile").value.trim(),
+                                speciality: document.getElementById("doctorSpeciality").value.trim(),
+                                registration: document.getElementById("doctorRegistration").value.trim(),
+                                address: document.getElementById("doctorAddress").value.trim(),
+                                consultation: document.getElementById("consultationType").value
+                            };
+
+                            doctors.push(doctor);
+
+                            localStorage.setItem("medidocDoctors",
+                                JSON.stringify(doctors)
+                            );
+
+                            message.textContent= "Registration is submitted！ Verification is pending.";
+
+                            form.reset();
+                            displayDoctors();
+                                });
+                            }
+
+if(search) {
+    search.addEventListener("input", displayDoctors);;
+}
+
+if(appointmentForm) {
+
+    appointmentForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const doctorIndex= Number(selectedDoctor.value);
+        const doctor= doctors[doctorIndex];
+
+        if(!doctor) {
+            appointmentMessage.textContent=
+            "Please select a doctor.";
+            return;
+        }
+
+        const type= document.getElementById("appointmentType").value;
+
+        if( doctor.consultation !== "Both" &&
+            doctor.consultation !== type
+        ) {
+            appointmentMessage.textContent=
+                    "This doctor does not offer that consultation type.";
+                    return;
+        }
+
+        const appointment= {
+            pateint: document.getElementById("pateintName").value.trim(),
+            mobile: document.getElementById("pateintMobile").value.trim(),
+            doctor: doctor.name,
+            type: type,
+            date: document.getElementById("appointmentDate").value,
+            time: document.getElementById("appointmentTime").value
+        };
+
+        appointments.push(appointment);
+
+        localStorage.setItem("medidocAppointments",JSON.stringify(appointments));
+
+        appointmentMessage.textContent= "Appointment submitted successfully！";
+
+        appointmentForm.reset();
+    });
+}
+
+displayDoctors();
+             });
+                
+                </script>
+
+                <script>
+                    window.addEventListener("DOMContentLoaded", function () {
                         event.preventDefault();
 
-                        message.testContent = 
-                        "Registration submitted successfully﹗ Verification is pending.";
+                        const appointmentArea=
+                        
+                        document.getElementById("patientAppointments");
 
-                        message.style.color = "purple"
+                        const totalElement= document.getElementById("totalAppointments");
+
+                        const upcomingElement= document.getElementById("upcomingAppointments");
+
+                        const completedElement= document.getElementById("completedAppointments");
+
+                        const refreshButton= document.getElementById("refreshDashboard");
+
+                        function loadDashboard() {
+
+                            const appointments= JSON.parse(
+
+                            localStorage.getItem("medidoc Appointments") ｜｜ "[]"
+                            );
+
+                            const today= new Date();
+                            today.setHours(0, 0, 0, 0);
+
+                            let upcoming= 0;
+                            let past= 0;
+
+                            appointmentsArea.innerHTML= "";
+
+                            totalElement.textContent= appointments.length;
+
+                            appointments.forEach(function (appointmenr) {
+
+                                const appointmentDate= new Date(appointment.date + "T00:00:00"
+                                );
+
+                                if (appointmentDate >= today) {
+                                    upcoming++;
+                                } else {
+                                    past++;
+                                }
+
+                                const card= document.createElement("h3");
+                                heading.textContent= "Dr. " + appointment.pateint;
+
+                                const date= document.createElement("p");
+                                date.textContent= "Date: " + appointment.date;
+
+                                const time= document.createElement("p");
+                                time.textContent= "Consultation: " + appointment.type;
+
+                                const status= document.createElement("span");
+
+                                status.className= "booking-status";
+                                status.textContent= appointmentDate >= today
+                                ? "Booking submitted"
+                                : "Past appointment";
+
+                                card.append(
+                                    heading,pateint,date,time,type,status
+                                );
+
+                                appointmentArea.appendChild(card);
+                            
+                            });
+
+                            upcomingElementt.textContent= upcoming;
+                            completedElement.textContent= past;
+
+                            if(appointments.kength === 0) {
+                                appointmentArea.innerHTML= `
+                                <div class= "dashboard-empty">
+                                    <span>📆</span>
+                                    <h3>No appointments yet</h3>
+                                    <p>Your appointment details will appear here after booking.</p>
+                                    </div>`;
+                            }
+                        }
+
+                        refreshButton.addEventListener("click", loadDashboard);
+
+                        loadDashboard();
+
                     });
-                });
                 </script>
              </body>
              </html>
