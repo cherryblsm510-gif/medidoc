@@ -1183,10 +1183,9 @@ class="pateint-dashboard-header">
 
              <script>
                 window.addEventListener("DOMContentLoaded", function() {
-                    event.preventDefault();
+                   
                     alert("Doctor registration JavaScript is working!")
 
-                    const form= document.getElementById("doctorForm");
                     const form= document.getElementById("doctorForm");
                     alert("Doctor form found: " + !!form);
                     const message= document.getElementById("doctorMessage");
@@ -1195,7 +1194,7 @@ class="pateint-dashboard-header">
                     
                     const appointmentForm= document.getElementById("appointmentForm");
                     const appointmentMessage= document.getElementById("appointmentMessage");
-                    const selectedDoctor= document.getElementById("selectedDoctors");
+                    const selectedDoctor= document.getElementById("selectedDoctor");
                     
                     let doctors= JSON.parse(
 
@@ -1252,7 +1251,7 @@ class="pateint-dashboard-header">
 
                         doctors.forEach(function (doctor, index) {
 
-                            const option= document.getElementById("option");
+                            const option= document.createElement("option");
                             option.value= index;
                             option.textContent= "Dr. " + doctor.name +
                             "_" + doctor.speciality;
@@ -1339,12 +1338,10 @@ if(appointmentForm) {
 
 displayDoctors();
              });
-                
-                </script>
+             </script>
 
                 <script>
                     window.addEventListener("DOMContentLoaded", function () {
-                        event.preventDefault();
 
                         const appointmentArea=
                         
